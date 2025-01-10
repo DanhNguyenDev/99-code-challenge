@@ -1,7 +1,7 @@
-import { MigrationInterface, QueryRunner } from "typeorm";
+import { MigrationInterface, QueryRunner } from 'typeorm'
 
 export class Testing1733824588833 implements MigrationInterface {
-  name = "Testing1733824588833";
+  name = 'Testing1733824588833'
 
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(
@@ -13,10 +13,10 @@ export class Testing1733824588833 implements MigrationInterface {
         "active" boolean NOT NULL DEFAULT false, 
         CONSTRAINT "PK_a3ffb1c0c8416b9fc6f907b7433" PRIMARY KEY ("id")
         )`
-    );
+    )
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.query(`DROP TABLE "users"`);
+    await queryRunner.query(`DROP TABLE "users"`)
   }
 }

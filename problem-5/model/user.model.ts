@@ -1,13 +1,13 @@
-import { Entity, PrimaryGeneratedColumn, Column, BaseEntity } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, BaseEntity } from 'typeorm'
 
-@Entity({ name: "users" })
+@Entity({ name: 'users' })
 export class User extends BaseEntity {
-  @PrimaryGeneratedColumn("uuid")
-  id: string;
+  @PrimaryGeneratedColumn('uuid')
+  id: string
 
   @Column()
-  name: string;
+  name: string
 
   @Column()
-  active: boolean;
+  active: boolean
 }

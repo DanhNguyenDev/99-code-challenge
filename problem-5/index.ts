@@ -1,18 +1,18 @@
-import "reflect-metadata";
-import express, { Express, Request, Response, Application } from "express";
-import dotenv from "dotenv";
-import router from "./routes/index.route";
-import helmet from "helmet";
+import 'reflect-metadata'
+import express, { Express, Request, Response, Application } from 'express'
+import dotenv from 'dotenv'
+import router from './routes/index.route'
+import helmet from 'helmet'
 
-dotenv.config();
+dotenv.config()
 
-const app: Application = express();
-const port = process.env.PORT || 3000;
+const app: Application = express()
+const port = process.env.PORT || 3000
 
-app.use(express.json());
-app.use(helmet());
-app.use("/api", router);
+app.use(express.json())
+app.use(helmet())
+app.use('/api', router)
 
 app.listen(port, () => {
-  console.log(`Server is Fire at http://localhost:${port}`);
-});
+  console.log(`Server is Fire at http://localhost:${port}`)
+})
